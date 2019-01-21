@@ -4,6 +4,7 @@ def get_first_name_of_season_winner(data, season)
   season_winner = ""
   data.each do |season_key, season_value|
     if season_key == season
+binding.pry
       season_value.each do |key, value|
         if key == "status" and value == "Winner"
           season_winner = season_value["name"]
